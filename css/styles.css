@@ -509,8 +509,6 @@ img {
   justify-content: center;
 }
 
-
-
 /* Media Queries */
 @media (max-width: 1200px) {
   .hero .hero-flex {
@@ -561,19 +559,6 @@ img {
     flex-direction: column;
     gap: 2rem;
   }
-  
-    /* Footer */
-  .footer {
-    font-size: 1rem;
-  }
-
-  .footer__container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 3rem;
-    max-width: 600px;
-  }
-}
 }
 
 @media (max-width: 768px) {
