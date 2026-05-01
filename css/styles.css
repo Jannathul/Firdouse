@@ -478,6 +478,27 @@ img {
   text-align: center;
   width: 200px;
 }
+/* =========================
+   PROJECT LAYOUT
+========================= */
+.project-card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.project-left {
+  flex: 1;
+}
+
+.project-right {
+  flex: 1;
+  text-align: left;
+}
+
+/* =========================
+   SLIDER
+========================= */
 .slider {
   position: relative;
   overflow: hidden;
@@ -491,10 +512,10 @@ img {
   transition: transform 0.5s ease-in-out;
 }
 
-/* Each image = full width */
+/* Images */
 .slides img {
   width: 100%;
-  flex-shrink: 0;   /* 🔥 KEY FIX */
+  flex-shrink: 0;
   height: 250px;
   object-fit: contain;
   background: #f5f5f5;
@@ -502,6 +523,25 @@ img {
   border-radius: 10px;
 }
 
+/* Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* =========================
+   DOTS (OPTIONAL)
+========================= */
 .dots {
   text-align: center;
   margin-top: 10px;
@@ -521,7 +561,28 @@ img {
   background: #ff4d5a;
 }
 
-/* Responsive (VERY IMPORTANT) */
+/* =========================
+   TEXT + BUTTONS
+========================= */
+.project-right h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.project-right p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.small-btn {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  border-radius: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 768px) {
   .project-card {
     flex-direction: column;
