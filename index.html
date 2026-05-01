@@ -326,8 +326,49 @@
 
 <!-- Projects Section -->
 <section class="chapters section" id="Projects">
+
+  <!-- 🔥 Internal CSS for animation -->
+  <style>
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.75rem;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border-radius: 12px;
+
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+
   <div class="container">
-    
+
     <div class="section-header">
       <h2>Projects</h2>
       <div class="heading-border"></div>
@@ -337,33 +378,38 @@
     <div class="chapter-cards">
 
       <div class="card">
-        
-        <!-- PDF Preview -->
-        <iframe 
-          src="https://raw.githubusercontent.com/Jannathul/Firdouse/main/SuperStore%20Sales.pdf" 
-          width="100%" 
-          height="250px"
-          style="border: none;">
-        </iframe>
+        <img src="images/powerbi-dashboard.png" alt="Power BI Project">
 
-        <!-- Title -->
         <h3>Power BI Sales Dashboard</h3>
 
-        <!-- Description -->
         <p>
           Developed an interactive Power BI dashboard to analyze sales performance,
           visualize KPIs, and identify trends for business decision-making.
         </p>
 
-        <!-- Open Full PDF -->
-        <a href="https://raw.githubusercontent.com/Jannathul/Firdouse/main/SuperStore%20Sales.pdf" target="_blank" class="btn">
-          View Full Project
+        <a href="https://github.com/xx/xx" target="_blank" class="btn">
+          View Project
         </a>
-
       </div>
 
     </div>
   </div>
+
+  <!-- 🔥 Scroll Animation Script -->
+  <script>
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
 </section>
 	
 	
