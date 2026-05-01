@@ -502,6 +502,25 @@ img {
   border-radius: 10px;
 }
 
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  margin: 5px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #ff4d5a;
+}
+
 /* Responsive (VERY IMPORTANT) */
 @media (max-width: 768px) {
   .project-card {
