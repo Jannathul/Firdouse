@@ -323,36 +323,32 @@
         </div>
       </div>
     </section>
-
+	  
 <!-- Projects Section -->
 <section class="section" id="project">
 
   <div class="container">
 
+    <!-- HEADER -->
     <div class="section-header">
       <h2>Projects</h2>
       <div class="heading-border"></div>
     </div>
 
+    <!-- PROJECT CARD -->
     <div class="card project-card">
 
-      <!-- LEFT: SLIDER -->
+      <!-- LEFT: IMAGE -->
       <div class="project-image">
-        <div class="slider">
-          <div class="slides" id="slides">
-            <img src="images/PB1.png" alt="Dashboard 1">
-            <img src="images/PB2.png" alt="Dashboard 2">
-            <img src="images/PB3.png" alt="Dashboard 3">
-            <img src="images/PB4.png" alt="Dashboard 4">
-            <img src="images/PB5.png" alt="Dashboard 5">
-          </div>
+        <img id="sliderImage" src="images/PB1.png" alt="Dashboard">
 
-          <button class="prev" onclick="moveSlide(-1)">❮</button>
-          <button class="next" onclick="moveSlide(1)">❯</button>
+        <div class="slider-controls">
+          <button onclick="prevSlide()">❮</button>
+          <button onclick="nextSlide()">❯</button>
         </div>
       </div>
 
-      <!-- RIGHT: TEXT -->
+      <!-- RIGHT: CONTENT -->
       <div class="project-content">
         <h3>Sales & Profitability Intelligence Dashboard</h3>
 
@@ -364,8 +360,8 @@
         </p>
 
         <div class="project-links">
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiMDQ1MGEzNGEtMzQ3Ni00ZjYyLWI0MDQtYzM1YTVlN2M4M2FjIiwidCI6ImZlMTc4MjFiLTdhMTAtNDdmZi1hZDZhLWNlOWM5Y2Y4OWU3NCIsImMiOjF9" target="_blank" class="btn">Live Dashboard</a>
-          <a href="https://github.com/Jannathul" target="_blank" class="btn">GitHub</a>
+          <a href="https://app.powerbi.com/view?r=..." target="_blank" class="btn small-btn">Live Dashboard</a>
+          <a href="https://github.com/Jannathul" target="_blank" class="btn small-btn">GitHub</a>
         </div>
       </div>
 
