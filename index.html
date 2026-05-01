@@ -325,50 +325,55 @@
     </section>
 	  
 <!-- Projects Section -->
+<!-- Projects Section -->
 <section class="section" id="project">
+<div class="container">
 
-  <div class="container">
+<div class="section-header">
+  <h2>Projects</h2>
+  <div class="heading-border"></div>
+</div>
 
-    <!-- HEADER -->
-    <div class="section-header">
-      <h2>Projects</h2>
-      <div class="heading-border"></div>
+<div class="card project-card">
+
+  <!-- LEFT COLUMN -->
+  <div class="project-left">
+    <div class="slider">
+      <div class="slides" id="slides">
+        <img src="images/PB1.png">
+        <img src="images/PB2.png">
+        <img src="images/PB3.png">
+        <img src="images/PB4.png">
+        <img src="images/PB5.png">
+      </div>
+
+      <button class="prev" onclick="moveSlide(-1)">❮</button>
+      <button class="next" onclick="moveSlide(1)">❯</button>
     </div>
+  </div>
 
-    <!-- PROJECT CARD -->
-    <div class="card project-card">
+  <!-- RIGHT COLUMN -->
+  <div class="project-right">
 
-      <!-- LEFT: IMAGE -->
-      <div class="project-image">
-        <img id="sliderImage" src="images/PB1.png" alt="Dashboard">
+    <h3>Sales & Profitability Intelligence Dashboard</h3>
 
-        <div class="slider-controls">
-          <button onclick="prevSlide()">❮</button>
-          <button onclick="nextSlide()">❯</button>
-        </div>
-      </div>
+    <p>
+      Developed a high-impact <strong>Power BI analytics solution</strong> using 
+      <strong>DAX (YoY, MoM)</strong> to analyze <strong>sales performance and profitability</strong>. 
+      Identified <strong>discount-driven margin erosion</strong> and 
+      <strong>profit leakage</strong>, enabling data-driven decision-making.
+    </p>
 
-      <!-- RIGHT: CONTENT -->
-      <div class="project-content">
-        <h3>Sales & Profitability Intelligence Dashboard</h3>
-
-        <p>
-          Developed a high-impact <strong>Power BI analytics solution</strong> using 
-          <strong>DAX (YoY, MoM)</strong> to analyze <strong>sales performance and profitability</strong>. 
-          Identified <strong>discount-driven margin erosion</strong> and 
-          <strong>profit leakage</strong>, enabling data-driven decision-making.
-        </p>
-
-        <div class="project-links">
-          <a href="https://app.powerbi.com/view?r=..." target="_blank" class="btn small-btn">Live Dashboard</a>
-          <a href="https://github.com/Jannathul" target="_blank" class="btn small-btn">GitHub</a>
-        </div>
-      </div>
-
+    <div class="project-links">
+      <a href="https://app.powerbi.com/view?r=..." target="_blank" class="btn small-btn">Live Dashboard</a>
+      <a href="https://github.com/Jannathul" target="_blank" class="btn small-btn">GitHub</a>
     </div>
 
   </div>
 
+</div>
+
+</div>
 </section>
 	
 
