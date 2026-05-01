@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenu.classList.toggle('active');
     });
 
-    // Auto close on click
     document.querySelectorAll('.mobile-menu-items a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
@@ -33,18 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // =========================
-  // IMAGE SLIDER (FUN VERSION)
+  // IMAGE SLIDER (SAFE VERSION)
   // =========================
-  let index = 0;
-  const slides = document.getElementById("slides");
+  const slider = document.querySelector(".slider");
 
-  if (slides) {
+  if (slider) {
+    let index = 0;
+    const slides = slider.querySelector(".slides");
     const totalSlides = slides.children.length;
 
-    // Create dots
+    // Create dots (scoped)
     const dotsContainer = document.createElement("div");
     dotsContainer.classList.add("dots");
-    slides.parentElement.appendChild(dotsContainer);
+    slider.appendChild(dotsContainer);
+
+    let dots = [];
 
     for (let i = 0; i < totalSlides; i++) {
       const dot = document.createElement("span");
@@ -57,9 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       dotsContainer.appendChild(dot);
+      dots.push(dot);
     }
-
-    const dots = document.querySelectorAll(".dot");
 
     function showSlide() {
       slides.style.transform = `translateX(-${index * 100}%)`;
@@ -77,19 +78,21 @@ document.addEventListener("DOMContentLoaded", () => {
       showSlide();
     };
 
-    // Auto slide (slower + smooth)
-    let autoSlide = setInterval(() => {
+    // Auto slide (controlled)
+    let autoSlide = setInterval(nextSlide, 4000);
+
+    function nextSlide() {
       index = (index + 1) % totalSlides;
       showSlide();
-    }, 4000);
+    }
 
-    // Pause on hover
-    slides.addEventListener("mouseenter", () => clearInterval(autoSlide));
-    slides.addEventListener("mouseleave", () => {
-      autoSlide = setInterval(() => {
-        index = (index + 1) % totalSlides;
-        showSlide();
-      }, 4000);
+    // Pause on hover (fixed)
+    slider.addEventListener("mouseenter", () => {
+      clearInterval(autoSlide);
+    });
+
+    slider.addEventListener("mouseleave", () => {
+      autoSlide = setInterval(nextSlide, 4000);
     });
   }
 
