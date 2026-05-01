@@ -104,14 +104,16 @@ img {
 
 /* Card */
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem 1.75rem;
+  padding: 2rem;
   background: #fff;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
 /* Navbar */
@@ -364,11 +366,18 @@ img {
 
 .takeaways-cards .card {
   flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
   text-align: left;
 }
 
 .takeaways-cards .card i {
   margin-right: 1rem;
+}
+
+.takeaways-cards i {
+  font-size: 2rem;
+  color: var(--primary-color);
 }
 
 /* Details */
