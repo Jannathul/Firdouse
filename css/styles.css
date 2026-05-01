@@ -494,13 +494,49 @@ img {
   transition: transform 0.6s ease;
 }
 
-/* Images FIXED */
+/* 2-column layout */
+.project-card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* LEFT SIDE */
+.project-image {
+  flex: 1;
+}
+
+/* RIGHT SIDE */
+.project-content {
+  flex: 1;
+  text-align: left;
+}
+
+/* Reduce font size */
+.project-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .slides img {
   width: 100%;
-  height: auto;            /* 🔥 KEY FIX */
-  max-height: 400px;       /* optional control */
-  object-fit: cover;       /* 🔥 CHANGE THIS */
+  height: 250px;        /* fixed height for clean layout */
+  object-fit: contain;  /* show full dashboard (no cropping) */
+  background: #f5f5f5;  /* keeps clean background */
+  padding: 10px;
   border-radius: 10px;
+}
+
+/* Responsive (VERY IMPORTANT) */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
 }
 
 /* Footer */
